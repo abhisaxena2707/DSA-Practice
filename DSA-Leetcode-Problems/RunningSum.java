@@ -16,8 +16,8 @@ Input: nums = [3,1,2,10,1]
 Output: [3,4,6,16,17]
 */
 
-class Solution {
-    public int[] runningSum(int[] nums) {
+class RunningSum {
+    public static int[] runningSum(int[] nums) {
         
         int len= nums.length;
         int[] result = new int[len];
@@ -28,5 +28,13 @@ class Solution {
             result[i]=sum;
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+        int[] nums={1,2,3,4,5};
+        for(int i:runningSum(nums)){
+            System.out.println(i);
+        }
+
     }
 }

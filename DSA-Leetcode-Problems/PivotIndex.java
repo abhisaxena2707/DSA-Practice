@@ -27,8 +27,8 @@ Left sum = 0 (no elements to the left of index 0)
 Right sum = nums[1] + nums[2] = 1 + -1 = 0
 */
 
-class Solution {
-    public int pivotIndex(int[] nums) {
+class PivotIndex {
+    public static int pivotIndex(int[] nums) {
         
         int len = nums.length;
         int left=0,right=0,totalSum=0;
@@ -40,6 +40,11 @@ class Solution {
             left=left+nums[i];
         }
         return -1;
+    }
+
+    public static void main(String[] args) {
+        int[] nums={1,7,3,6,5,6};
+        System.out.println(pivotIndex(nums));
     }
 
 }
